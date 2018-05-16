@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,107 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ConversorApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Conversor de Divisas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IlQ-Xz-e1e">
+                                <rect key="frame" x="78" y="50" width="219" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bsv-LV-ghh">
+                                <rect key="frame" x="30" y="109" width="315" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="De:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W0P-Gy-39w">
+                                <rect key="frame" x="174.5" y="159" width="26" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="SJt-VK-zp7">
+                                <rect key="frame" x="28.5" y="200" width="319" height="29"/>
+                                <segments>
+                                    <segment title="Millas"/>
+                                    <segment title="Kilómetros"/>
+                                    <segment title="Yardas"/>
+                                    <segment title="Pie"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="up7-e1-uO8">
+                                <rect key="frame" x="179.5" y="248" width="16" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resultado" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EuM-DA-A8k">
+                                <rect key="frame" x="136" y="557" width="104" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b2Z-AS-HJ8">
+                                <rect key="frame" x="30" y="606" width="315" height="36"/>
+                                <color key="backgroundColor" red="0.076685495670000006" green="0.47192865610000001" blue="0.96561425919999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Convertir">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.076685495674610138" green="0.47192865610122681" blue="0.96561425924301147" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="convertir:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6S5-PX-2Cq"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="lCy-vv-YkE">
+                                <rect key="frame" x="28" y="288" width="319" height="29"/>
+                                <segments>
+                                    <segment title="Millas"/>
+                                    <segment title="Kilómetros"/>
+                                    <segment title="Yardas"/>
+                                    <segment title="Pie"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lCy-vv-YkE" firstAttribute="top" secondItem="up7-e1-uO8" secondAttribute="bottom" constant="20" id="4ci-IU-JSW"/>
+                            <constraint firstItem="Bsv-LV-ghh" firstAttribute="top" secondItem="IlQ-Xz-e1e" secondAttribute="bottom" constant="30" id="AZy-hX-vZs"/>
+                            <constraint firstItem="EuM-DA-A8k" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Fgk-eG-bRl"/>
+                            <constraint firstItem="up7-e1-uO8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="INt-BN-sBV"/>
+                            <constraint firstItem="Bsv-LV-ghh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="NaJ-hX-mSi"/>
+                            <constraint firstItem="SJt-VK-zp7" firstAttribute="top" secondItem="W0P-Gy-39w" secondAttribute="bottom" constant="20" id="VFu-zc-Pfv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="b2Z-AS-HJ8" secondAttribute="trailing" constant="30" id="bmF-5l-q7y"/>
+                            <constraint firstItem="W0P-Gy-39w" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="byd-My-vfV"/>
+                            <constraint firstItem="up7-e1-uO8" firstAttribute="top" secondItem="SJt-VK-zp7" secondAttribute="bottom" constant="20" id="hve-RQ-Qxg"/>
+                            <constraint firstItem="b2Z-AS-HJ8" firstAttribute="top" secondItem="EuM-DA-A8k" secondAttribute="bottom" constant="20" id="itk-Cu-mG9"/>
+                            <constraint firstItem="W0P-Gy-39w" firstAttribute="top" secondItem="Bsv-LV-ghh" secondAttribute="bottom" constant="20" id="joM-2i-hrs"/>
+                            <constraint firstItem="IlQ-Xz-e1e" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qVf-2j-HyQ"/>
+                            <constraint firstItem="SJt-VK-zp7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="s7u-Ot-Jlv"/>
+                            <constraint firstItem="IlQ-Xz-e1e" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="sCs-Dt-YPx"/>
+                            <constraint firstItem="EuM-DA-A8k" firstAttribute="top" secondItem="lCy-vv-YkE" secondAttribute="bottom" constant="240" id="sR4-db-499"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bsv-LV-ghh" secondAttribute="trailing" constant="30" id="uUg-Uh-y0x"/>
+                            <constraint firstItem="b2Z-AS-HJ8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="xD6-Nl-eVr"/>
+                            <constraint firstItem="b2Z-AS-HJ8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xkw-aS-9B7"/>
+                            <constraint firstItem="lCy-vv-YkE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yMw-lV-cUV"/>
+                            <constraint firstItem="Bsv-LV-ghh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="z67-nh-HE6"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="finalValue" destination="EuM-DA-A8k" id="vtH-eU-m5b"/>
+                        <outlet property="fromSegment" destination="SJt-VK-zp7" id="4vS-yR-AnU"/>
+                        <outlet property="initialValue" destination="Bsv-LV-ghh" id="peS-Hy-bMa"/>
+                        <outlet property="toSegment" destination="lCy-vv-YkE" id="pRG-R3-PlD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="85.907046476761622"/>
         </scene>
     </scenes>
 </document>
